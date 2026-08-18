@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+
+    --base: #141414;
+    --base-soft: #14191B;
+    --card: #161D20;
+    --card-alt: #1A2529;
+    --brand-950: #06333D;
+    --brand-900: #0B4A57;
+    --brand-700: #10697C;
+    --brand-500: #1B8FA8;
+    --brand-400: #2AA6C0;
+    --ink: #f7f7f7;
+    --ink-muted: #b8aea7;
+    --border: rgba(27, 143, 168, 0.18);
+  }
+
+  * {
+    @apply border-border;
+    min-width: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* compensa o header fixo ao navegar por âncoras */
+    scroll-padding-top: 6rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-base text-ink font-sans antialiased;
+    overflow-x: hidden;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+  }
+
+  /* nenhuma seção pode gerar overflow horizontal */
+  #root {
+    overflow-x: clip;
+    isolation: isolate;
+  }
+
+  ::selection {
+    background: rgba(27, 143, 168, 0.28);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-500);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold tracking-[-0.03em];
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101010;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #06333D, #0B4A57);
+    border-radius: 999px;
+    border: 2px solid #101010;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0B4A57, #10697C);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* ---------- Cards ---------- */
+  .card-surface {
+    background: rgba(22, 29, 32, 0.72);
+    border: 1px solid rgba(27, 143, 168, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 16px;
+    transition:
+      border-color 0.35s ease,
+      box-shadow 0.35s ease,
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 0.35s ease;
+  }
+
+  .card-surface:hover {
+    border-color: rgba(27, 143, 168, 0.45);
+    box-shadow: 0 15px 60px rgba(27, 143, 168, 0.1);
+  }
+
+  .card-lift:hover {
+    transform: translateY(-5px);
+  }
+
+  /* ---------- Grid tecnológica ---------- */
+  .tech-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .tech-grid-fade {
+    -webkit-mask-image: radial-gradient(ellipse 100% 70% at 50% 30%, #000 35%, transparent 100%);
+    mask-image: radial-gradient(ellipse 100% 70% at 50% 30%, #000 35%, transparent 100%);
+  }
+
+  /* ---------- Glow radial do Hero ---------- */
+  .hero-radial {
+    background:
+      radial-gradient(
+        circle at 50% 20%,
+        rgba(27, 143, 168, 0.35),
+        rgba(11, 74, 87, 0.15) 30%,
+        transparent 65%
+      ),
+      #141414;
+  }
+
+  .glow-soft {
+    background: radial-gradient(circle, rgba(27, 143, 168, 0.16), transparent 68%);
+  }
+
+  /* ---------- Texto ---------- */
+  .text-gradient-brand {
+    background: linear-gradient(100deg, #2AA6C0 0%, #1B8FA8 45%, #10697C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .serif-accent {
+    @apply font-serif italic font-normal;
+    letter-spacing: -0.01em;
+  }
+
+  /* ---------- Divisor luminoso ---------- */
+  .hr-glow {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(27, 143, 168, 0.35) 30%,
+      rgba(27, 143, 168, 0.55) 50%,
+      rgba(27, 143, 168, 0.35) 70%,
+      transparent
+    );
+  }
+
+  /* ---------- Chips / tags ---------- */
+  .tag {
+    @apply inline-flex items-center rounded-full border px-2.5 py-1 font-mono text-[11px] leading-none;
+    border-color: rgba(27, 143, 168, 0.22);
+    background: rgba(11, 74, 87, 0.38);
+    color: #8FD6E6;
+  }
+
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-24 sm:py-28 lg:py-36;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
