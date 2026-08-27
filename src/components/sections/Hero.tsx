@@ -91,14 +91,19 @@ export function Hero() {
               variants={item}
               className="mt-9 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center"
             >
+              {/* CTA de Projetos desativado temporariamente (seção off)
               <Button asChild size="lg" variant="primary" className="group w-full sm:w-auto">
                 <a href="#projetos">
                   Conhecer meus projetos
                   <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button asChild size="lg" variant="dark" className="w-full sm:w-auto">
-                <a href="#contato">Entrar em contato</a>
+              */}
+              <Button asChild size="lg" variant="primary" className="group w-full sm:w-auto">
+                <a href="#contato">
+                  Entrar em contato
+                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
               </Button>
             </motion.div>
 
@@ -138,7 +143,7 @@ export function Hero() {
                 <div className="relative overflow-hidden rounded-[22px] border border-brand-500/25 bg-base-card/60 p-1.5 shadow-[0_40px_120px_-45px_rgba(27,143,168,.65)]">
                   <img
                     src={profile.photo}
-                    alt={`Retrato de ${profile.name}, desenvolvedor Back-End e de automação`}
+                    alt={`Retrato de ${profile.name}, desenvolvedor Full Stack e de automações`}
                     width={640}
                     height={640}
                     loading="eager"

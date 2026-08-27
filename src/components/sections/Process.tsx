@@ -32,10 +32,10 @@ export function Process() {
           eyebrow="Método"
           title={
             <span id="processo-titulo">
-              Do problema à <span className="serif-accent text-gradient-brand">automação.</span>
+              Do problema à <span className="serif-accent text-gradient-brand">solução.</span>
             </span>
           }
-          subtitle="Automação boa começa longe do editor de código: começa entendendo como o processo realmente acontece."
+          subtitle="Software bom começa longe do editor de código: começa entendendo como o processo realmente acontece."
         />
 
         <div ref={containerRef} className="relative mt-16 lg:mt-24">

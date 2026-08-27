@@ -45,7 +45,7 @@ export function Projects() {
               <span className="serif-accent text-gradient-brand">processos reais</span>
             </span>
           }
-          subtitle="Algumas das soluções que desenvolvi utilizando automação, integração de sistemas e desenvolvimento Back-End."
+          subtitle="Algumas das soluções que desenvolvi utilizando desenvolvimento full stack, automação e integração de sistemas."
         />
 
         {/* controles do carrossel (apenas mobile/tablet) */}

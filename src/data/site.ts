@@ -5,17 +5,17 @@
  */
 
 export const profile = {
-  // name: 'Jerffeson Florêncio',
+  name: 'Jerffeson Florêncio',
   initials: 'JF',
   logo: 'Jerffeson.dev',
-  role: 'Back-End • Automação • Python • n8n',
+  role: 'Full Stack • Automação • Python • React • n8n',
   headline: {
     lead: 'Transformando processos em',
     accent: 'soluções digitais',
     tail: 'inteligentes.',
   },
   description:
-    'Desenvolvedor focado em criar automações, integrações e sistemas que eliminam tarefas repetitivas, conectam operações e transformam processos reais em soluções escaláveis.',
+    'Desenvolvedor Full Stack focado em construir aplicações ponta a ponta — do banco de dados à interface — e automações que eliminam tarefas repetitivas, conectam operações e transformam processos reais em soluções escaláveis.',
   availability: 'Disponível para projetos',
   // availability: 'Disponível para projetos e novas oportunidades',
   // availability: 'Jerffeson Florêncio',
@@ -33,7 +33,7 @@ export const navigation = [
   { label: 'Início', href: '#inicio', id: 'inicio' },
   { label: 'Sobre', href: '#sobre', id: 'sobre' },
   { label: 'Tecnologias', href: '#tecnologias', id: 'tecnologias' },
-  { label: 'Projetos', href: '#projetos', id: 'projetos' },
+  // { label: 'Projetos', href: '#projetos', id: 'projetos' }, // seção de Projetos desativada temporariamente
   { label: 'Experiência', href: '#experiencia', id: 'experiencia' },
   { label: 'Contato', href: '#contato', id: 'contato' },
 ] as const
@@ -55,20 +55,21 @@ export const about = {
   paragraphs: [
     'Mais de 10 anos de experiência em gestão de processos e liderança de equipes no setor industrial — rotinas operacionais, indicadores, pessoas e melhoria contínua.',
     'Em 2024 iniciei a transição profissional para tecnologia. Atualmente curso Análise e Desenvolvimento de Sistemas na Estácio, com conclusão prevista para 2026, e atuo como Estagiário de Projetos na MD Digital Law.',
-    'Meu foco está em resolver o problema antes de escrever a primeira linha: entender o processo, medir o gargalo e só então construir a automação que devolve tempo para o time.',
+    'Meu foco está em resolver o problema antes de escrever a primeira linha: entender o processo, medir o gargalo e só então construir a aplicação ou a automação que devolve tempo para o time.',
   ],
   quote:
-    'Traduzo anos de experiência em processos industriais em soluções de software que automatizam, integram e escalam operações.',
+    'Traduzo anos de experiência em processos industriais em aplicações full stack e automações que integram, escalam e devolvem tempo para as operações.',
   focus: [
     'Python',
-    'Desenvolvimento Back-End',
+    'TypeScript',
+    'Desenvolvimento Full Stack',
+    'React',
     'Automação de processos',
     'n8n',
     'APIs',
     'Bancos de dados',
     'Integrações',
     'Docker',
-    'Soluções empresariais',
   ],
 } as const
 
@@ -100,13 +101,13 @@ export const stats: Stat[] = [
     value: null,
     display: 'Python',
     label: 'Principal linguagem',
-    description: 'Back-End, scripts e automações',
+    description: 'APIs, scripts e automações',
   },
   {
     value: null,
-    display: 'Automação',
+    display: 'Full Stack',
     label: 'Principal especialidade',
-    description: 'n8n, integrações e processos ponta a ponta',
+    description: 'Back-end, front-end e automações ponta a ponta',
   },
 ]
 
@@ -291,7 +292,7 @@ export const processSteps = [
   {
     step: '04',
     title: 'Desenvolvo',
-    description: 'Construo com Python, APIs e banco de dados, priorizando clareza.',
+    description: 'Construo a aplicação com Python, React, APIs e banco de dados.',
     icon: 'code',
   },
   {
@@ -332,8 +333,8 @@ export const experience: ExperienceItem[] = [
     period: '2024',
     title: 'Transição para Tecnologia',
     description:
-      'Início da jornada profissional em desenvolvimento de software e automação, com foco em Python, back-end e integração de sistemas.',
-    tags: ['Python', 'Back-End', 'Automação'],
+      'Início da jornada profissional em desenvolvimento de software e automação, com foco em Python, desenvolvimento full stack e integração de sistemas.',
+    tags: ['Python', 'Full Stack', 'Automação'],
   },
   {
     period: 'Atualmente',
@@ -357,7 +358,7 @@ export const experience: ExperienceItem[] = [
 /* -------------------------------- CONTATO ------------------------------- */
 
 export const contact = {
-  headline: 'Tem um processo que poderia ser automatizado?',
+  headline: 'Tem um sistema para construir ou um processo para automatizar?',
   subheadline: 'Vamos transformar essa ideia em uma solução.',
   cta: 'Falar comigo',
 } as const

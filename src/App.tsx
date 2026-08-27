@@ -4,7 +4,7 @@ import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
 import { About } from '@/components/sections/About'
 import { TechStack } from '@/components/sections/TechStack'
-import { Projects } from '@/components/sections/Projects'
+// import { Projects } from '@/components/sections/Projects' // seção de Projetos desativada temporariamente
 import { Process } from '@/components/sections/Process'
 import { Experience } from '@/components/sections/Experience'
 import { GitHubSection } from '@/components/sections/GitHubSection'
@@ -27,7 +27,7 @@ export default function App() {
         <Hero />
         <About />
         <TechStack />
-        <Projects />
+        {/* <Projects /> */}  {/* seção de Projetos desativada temporariamente */}
         <Process />
         <Experience />
         <GitHubSection />

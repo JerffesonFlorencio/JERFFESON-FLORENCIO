@@ -18,7 +18,7 @@ export function TechStack() {
               Tecnologias que <span className="serif-accent text-gradient-brand">utilizo</span>
             </span>
           }
-          subtitle="Ferramentas que uso para construir back-ends, conectar sistemas e colocar processos para rodarem sozinhos."
+          subtitle="Ferramentas que uso para construir aplicações full stack, conectar sistemas e colocar processos para rodarem sozinhos."
         />
 
         <motion.div

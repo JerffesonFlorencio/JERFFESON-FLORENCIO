@@ -1,6 +1,6 @@
 # Jerffeson Florêncio — Portfólio
 
-Portfólio profissional com foco em **Back-End, Automação, Python e n8n**.
+Portfólio profissional com foco em **Desenvolvimento Full Stack, Automações, Python, React e n8n**.
 Landing page dark premium em **azul petróleo**, responsiva, com animações de scroll,
 partículas em Three.js, dados reais do GitHub e formulário de contato persistido no Supabase.
 
