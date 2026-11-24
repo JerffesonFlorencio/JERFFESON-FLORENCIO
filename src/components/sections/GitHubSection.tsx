@@ -26,7 +26,7 @@ export function GitHubSection() {
 
   return (
     <section aria-labelledby="github-titulo" className="section-pad relative">
-      <div aria-hidden className="hr-glow container-page mb-24 opacity-40" />
+      <div aria-hidden className="hr-glow container-page mb-14 opacity-40 lg:mb-20" />
 
       <div className="container-page">
         <SectionHeading

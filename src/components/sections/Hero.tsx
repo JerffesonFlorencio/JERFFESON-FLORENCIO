@@ -66,7 +66,7 @@ export function Hero() {
 
             <motion.h1
               variants={item}
-              className="mt-4 max-w-[16ch] text-balance text-[2.4rem] font-bold leading-[1.03] tracking-[-0.035em] sm:text-[3.2rem] lg:max-w-none lg:text-[3.6rem] xl:text-[4.1rem]"
+              className="mt-4 max-w-[16ch] text-balance text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.04em] sm:text-[3.3rem] lg:max-w-none lg:text-[3.7rem] xl:text-[4.2rem]"
             >
               {profile.headline.lead}{' '}
               <span className="serif-accent text-gradient-brand">{profile.headline.accent}</span>{' '}
@@ -82,7 +82,7 @@ export function Hero() {
 
             <motion.p
               variants={item}
-              className="mt-5 max-w-[54ch] text-[15px] leading-[1.75] text-ink-muted sm:text-[16.5px]"
+              className="mt-6 max-w-[54ch] text-[16px] leading-[1.75] text-ink-muted sm:text-[17px]"
             >
               {profile.description}
             </motion.p>
@@ -140,7 +140,7 @@ export function Hero() {
                 <div className="absolute -inset-8 -z-10 rounded-full bg-brand-500/[.16] blur-[70px]" />
 
                 {/* moldura */}
-                <div className="relative overflow-hidden rounded-[22px] border border-brand-500/25 bg-base-card/60 p-1.5 shadow-[0_40px_120px_-45px_rgba(27,143,168,.65)]">
+                <div className="relative overflow-hidden rounded-[22px] border border-brand-500/30 bg-base-card/60 p-1.5 shadow-[0_32px_80px_-38px_rgba(0,0,0,.9),0_18px_65px_-48px_rgba(27,143,168,.7)]">
                   <img
                     src={profile.photo}
                     alt={`Retrato de ${profile.name}, desenvolvedor Full Stack e de automações`}

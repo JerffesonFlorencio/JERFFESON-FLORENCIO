@@ -14,7 +14,7 @@ export function Experience() {
 
   return (
     <section id="experiencia" aria-labelledby="experiencia-titulo" className="section-pad relative">
-      <div aria-hidden className="hr-glow container-page mb-24 opacity-40" />
+      <div aria-hidden className="hr-glow container-page mb-14 opacity-40 lg:mb-20" />
 
       <div className="container-page">
         <SectionHeading
@@ -27,7 +27,7 @@ export function Experience() {
           subtitle="Do chão de fábrica ao código: cada etapa somou uma peça na forma como resolvo problemas hoje."
         />
 
-        <div ref={timelineRef} className="relative mx-auto mt-16 max-w-3xl lg:mt-24">
+        <div ref={timelineRef} className="relative mx-auto mt-14 max-w-3xl lg:mt-20">
           {/* linha vertical */}
           <div
             aria-hidden
@@ -39,7 +39,7 @@ export function Experience() {
             />
           </div>
 
-          <ol className="space-y-10 sm:space-y-12">
+          <ol className="space-y-8 sm:space-y-10">
             {experience.map((item, index) => (
               <motion.li
                 key={item.title}
@@ -61,7 +61,7 @@ export function Experience() {
                   />
                 </span>
 
-                <article className="card-surface p-6 sm:p-7">
+                <article className="card-surface card-lift p-6 sm:p-8">
                   <header className="flex flex-wrap items-center gap-3">
                     <span className="rounded-full border border-brand-500/25 bg-brand-500/[.08] px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-brand-400">
                       {item.period}
@@ -74,15 +74,15 @@ export function Experience() {
                     )}
                   </header>
 
-                  <h3 className="mt-4 text-[17px] font-semibold leading-snug text-ink sm:text-[19px]">
+                  <h3 className="mt-5 text-[19px] font-semibold leading-snug text-ink sm:text-[21px]">
                     {item.title}
                   </h3>
 
                   {item.org && (
-                    <p className="mt-1 text-[13.5px] font-medium text-brand-500/85">{item.org}</p>
+                    <p className="mt-1.5 text-[14px] font-medium text-[#9ddce9]">{item.org}</p>
                   )}
 
-                  <p className="mt-3 text-[14.5px] leading-[1.72] text-ink-muted">
+                  <p className="mt-4 text-[15px] leading-[1.75] text-ink-muted">
                     {item.description}
                   </p>
 

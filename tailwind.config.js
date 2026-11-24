@@ -25,9 +25,9 @@ export default {
         },
         ink: {
           DEFAULT: '#F7F7F7',
-          muted: '#B8AEA7',
+          muted: '#B9C5C9',
         },
-        border: 'rgba(27, 143, 168, 0.18)',
+        border: 'rgba(153, 207, 218, 0.16)',
         ring: '#1B8FA8',
       },
       fontFamily: {

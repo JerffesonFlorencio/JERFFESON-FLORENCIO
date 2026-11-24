@@ -8,14 +8,14 @@ export const profile = {
   name: 'Jerffeson Florêncio',
   initials: 'JF',
   logo: 'Jerffeson.dev',
-  role: 'Full Stack • Automação • Python • React • n8n',
+  role: 'Desenvolvedor Full Stack • Python • React • n8n • Automações B2B',
   headline: {
     lead: 'Transformando processos em',
     accent: 'soluções digitais',
     tail: 'inteligentes.',
   },
   description:
-    'Desenvolvedor Full Stack focado em construir aplicações ponta a ponta — do banco de dados à interface — e automações que eliminam tarefas repetitivas, conectam operações e transformam processos reais em soluções escaláveis.',
+    'Desenvolvedor Full Stack com Python, React e n8n. Construo aplicações ponta a ponta — do banco de dados à interface — e automações B2B que eliminam tarefas repetitivas, integram sistemas e transformam processos reais em soluções escaláveis.',
   availability: 'Disponível para projetos',
   // availability: 'Disponível para projetos e novas oportunidades',
   // availability: 'Jerffeson Florêncio',
@@ -54,7 +54,7 @@ export const about = {
   title: 'Da gestão de processos para o código.',
   paragraphs: [
     'Mais de 10 anos de experiência em gestão de processos e liderança de equipes no setor industrial — rotinas operacionais, indicadores, pessoas e melhoria contínua.',
-    'Em 2024 iniciei a transição profissional para tecnologia. Atualmente curso Análise e Desenvolvimento de Sistemas na Estácio, com conclusão prevista para 2026, e atuo como Estagiário de Projetos na MD Digital Law.',
+    'Em 2024 iniciei a transição profissional para tecnologia. Curso Análise e Desenvolvimento de Sistemas na Estácio e atuo como Desenvolvedor Full Stack na MF Digital Law, criando soluções B2B e automações para operações reais.',
     'Meu foco está em resolver o problema antes de escrever a primeira linha: entender o processo, medir o gargalo e só então construir a aplicação ou a automação que devolve tempo para o time.',
   ],
   quote:
@@ -338,12 +338,12 @@ export const experience: ExperienceItem[] = [
   },
   {
     period: 'Atualmente',
-    title: 'Estagiário de Projetos',
-    org: 'MD Digital Law',
+    title: 'Desenvolvedor Full Stack',
+    org: 'MF Digital Law',
     description:
-      'Atuação com tecnologia, projetos, automações e soluções aplicadas ao setor jurídico.',
+      'Desenvolvimento e manutenção de sistemas B2B para o ecossistema jurídico e digital, do back-end à interface. Crio automações com n8n e Python, integro APIs e sistemas de terceiros e otimizo fluxos operacionais — reduzindo tarefas manuais, retrabalho e tempo de resposta das equipes.',
     current: true,
-    tags: ['Projetos', 'Automação', 'LegalTech'],
+    tags: ['Full Stack', 'Python', 'React', 'n8n', 'APIs', 'LegalTech'],
   },
   {
     period: '2026',

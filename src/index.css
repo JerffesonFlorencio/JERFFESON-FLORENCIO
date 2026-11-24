@@ -16,8 +16,8 @@
     --brand-500: #1B8FA8;
     --brand-400: #2AA6C0;
     --ink: #f7f7f7;
-    --ink-muted: #b8aea7;
-    --border: rgba(27, 143, 168, 0.18);
+    --ink-muted: #b9c5c9;
+    --border: rgba(153, 207, 218, 0.16);
   }
 
   * {
@@ -101,25 +101,32 @@
 @layer components {
   /* ---------- Cards ---------- */
   .card-surface {
-    background: rgba(22, 29, 32, 0.72);
-    border: 1px solid rgba(27, 143, 168, 0.12);
+    background: linear-gradient(155deg, rgba(29, 42, 46, 0.84), rgba(20, 28, 31, 0.92));
+    border: 1px solid rgba(153, 207, 218, 0.16);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 16px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 18px 48px -36px rgba(0, 0, 0, 0.85);
     transition:
-      border-color 0.35s ease,
-      box-shadow 0.35s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease,
       transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-      background-color 0.35s ease;
+      background-color 0.3s ease;
   }
 
-  .card-surface:hover {
-    border-color: rgba(27, 143, 168, 0.45);
-    box-shadow: 0 15px 60px rgba(27, 143, 168, 0.1);
+  @media (hover: hover) {
+    .card-surface:hover {
+      border-color: rgba(64, 173, 195, 0.48);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 24px 52px -30px rgba(0, 0, 0, 0.8), 0 12px 38px -26px rgba(27, 143, 168, 0.45);
+    }
+
+    .card-lift:hover {
+      transform: translateY(-4px);
+    }
   }
 
-  .card-lift:hover {
-    transform: translateY(-5px);
+  .card-surface:focus-within {
+    border-color: rgba(64, 173, 195, 0.48);
   }
 
   /* ---------- Grid tecnológica ---------- */
@@ -153,7 +160,7 @@
 
   /* ---------- Texto ---------- */
   .text-gradient-brand {
-    background: linear-gradient(100deg, #2AA6C0 0%, #1B8FA8 45%, #10697C 100%);
+    background: linear-gradient(100deg, #a6e4ef 0%, #57bfd2 52%, #2aa6c0 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -179,10 +186,10 @@
 
   /* ---------- Chips / tags ---------- */
   .tag {
-    @apply inline-flex items-center rounded-full border px-2.5 py-1 font-mono text-[11px] leading-none;
-    border-color: rgba(27, 143, 168, 0.22);
-    background: rgba(11, 74, 87, 0.38);
-    color: #8FD6E6;
+    @apply inline-flex items-center rounded-full border px-3 py-1.5 font-mono text-[11px] leading-none;
+    border-color: rgba(64, 173, 195, 0.28);
+    background: rgba(11, 74, 87, 0.27);
+    color: #b4e2ea;
   }
 
   .noise-overlay::after {
@@ -201,7 +208,7 @@
   }
 
   .section-pad {
-    @apply py-24 sm:py-28 lg:py-36;
+    @apply py-20 sm:py-24 lg:py-28;
   }
 
   .no-scrollbar::-webkit-scrollbar {

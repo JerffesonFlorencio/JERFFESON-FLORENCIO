@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { motion, type Variants } from 'framer-motion'
+import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 const EASE = [0.16, 1, 0.3, 1] as const
@@ -39,12 +39,13 @@ export function Reveal({
   as = 'div',
 }: RevealProps) {
   const Component = motion[as]
+  const reduceMotion = useReducedMotion()
 
   return (
     <Component
       className={cn(className)}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={reduceMotion ? false : { opacity: 0, y }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px 0px -80px 0px' }}
       transition={{ duration, delay, ease: EASE }}
     >
@@ -61,12 +62,13 @@ type StaggerProps = {
 
 /** Container que aplica stagger nos filhos que usarem `fadeUp`. */
 export function Stagger({ children, className, delay = 0 }: StaggerProps) {
+  const reduceMotion = useReducedMotion()
   return (
     <motion.div
       className={cn(className)}
       variants={staggerContainer}
-      initial="hidden"
-      whileInView="visible"
+      initial={reduceMotion ? false : 'hidden'}
+      whileInView={reduceMotion ? undefined : 'visible'}
       viewport={{ once: true, margin: '-70px 0px' }}
       transition={{ delayChildren: delay }}
     >

@@ -33,13 +33,13 @@ export function Stats() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-70px 0px' }}
-      className="mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-28 lg:grid-cols-4"
+      className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4"
     >
       {stats.map((stat) => (
         <motion.div
           key={stat.label}
           variants={fadeUp}
-          className="card-surface card-lift group relative p-6"
+          className="card-surface card-lift group relative p-6 sm:p-7"
         >
           <span
             aria-hidden
@@ -51,7 +51,7 @@ export function Stats() {
           </dd>
 
           <dt className="mt-4 text-sm font-medium text-ink">{stat.label}</dt>
-          <p className="mt-1.5 text-[13px] leading-relaxed text-ink-muted/80">{stat.description}</p>
+          <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">{stat.description}</p>
         </motion.div>
       ))}
     </motion.dl>

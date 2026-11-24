@@ -16,28 +16,28 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
   const panelId = useId()
 
   return (
-    <article className="card-surface card-lift group flex h-full flex-col">
+    <article className="card-surface card-lift group relative flex h-full flex-col overflow-hidden">
       {/* -------------------------- mockup de código ------------------------- */}
-      <div className="relative overflow-hidden rounded-t-[16px] border-b border-white/[.06]">
+      <div className="relative overflow-hidden border-b border-white/[.08]">
         <div className={cn('absolute inset-0 bg-gradient-to-br', accentGradient[project.accent])} />
         <div className="tech-grid absolute inset-0 opacity-40" />
 
-        <div className="relative p-5">
-          <div className="rounded-xl border border-brand-500/18 bg-[#070C0E]/85 shadow-[0_18px_50px_-30px_rgba(0,0,0,1)] backdrop-blur-sm">
+        <div className="relative p-5 sm:p-6">
+          <div className="rounded-xl border border-brand-500/25 bg-[#070C0E]/90 shadow-[0_20px_50px_-28px_rgba(0,0,0,.95)] transition-transform duration-500 ease-out motion-safe:group-hover:-translate-y-1">
             <div className="flex items-center gap-2 border-b border-white/[.06] px-3.5 py-2">
               <Terminal className="size-3.5 text-brand-500/70" strokeWidth={1.8} aria-hidden />
-              <span className="font-mono text-[11px] text-ink-muted/85">{project.snippet.file}</span>
-              <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-ink-muted/40">
+              <span className="font-mono text-[11px] text-ink-muted">{project.snippet.file}</span>
+              <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-ink-muted/75">
                 {String(index + 1).padStart(2, '0')}
               </span>
             </div>
 
-            <pre className="overflow-x-auto px-3.5 py-3 font-mono text-[11.5px] leading-[1.75] text-ink-muted/85">
+            <pre className="overflow-x-auto px-3.5 py-4 font-mono text-[11.5px] leading-[1.75] text-ink-muted">
               <code>
                 {project.snippet.lines.map((line) => (
                   <span key={line} className="block whitespace-pre">
                     {line.startsWith('#') || line.startsWith('//') ? (
-                      <span className="text-emerald-400/70">{line}</span>
+                      <span className="text-emerald-300/90">{line}</span>
                     ) : (
                       line
                     )}
@@ -50,18 +50,18 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       </div>
 
       {/* ------------------------------ conteúdo ---------------------------- */}
-      <div className="flex flex-1 flex-col p-6">
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-500/85">
+      <div className="flex flex-1 flex-col p-6 sm:p-7">
+        <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#9ddce9]">
           {project.category}
         </span>
 
-        <h3 className="mt-2.5 text-[19px] font-semibold leading-snug text-ink transition-colors duration-300 group-hover:text-brand-400">
+        <h3 className="mt-3 text-[20px] font-semibold leading-snug text-ink transition-colors duration-300 group-hover:text-[#9ddce9] sm:text-[22px]">
           {project.title}
         </h3>
 
-        <p className="mt-3 text-[14.5px] leading-[1.72] text-ink-muted">{project.description}</p>
+        <p className="mt-3 max-w-[52ch] text-[15px] leading-[1.75] text-ink-muted">{project.description}</p>
 
-        <ul className="mt-5 flex flex-wrap gap-2">
+        <ul className="mt-6 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <li key={tag} className="tag">
               {tag}
@@ -78,14 +78,14 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
               className="overflow-hidden"
             >
               <ul className="mt-6 space-y-2.5 border-l border-brand-500/25 pl-4">
                 {project.highlights.map((highlight) => (
                   <li
                     key={highlight}
-                    className="relative text-[13.5px] leading-relaxed text-ink-muted"
+                    className="relative text-[14px] leading-[1.7] text-ink-muted"
                   >
                     <span
                       aria-hidden
@@ -114,7 +114,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             variant="ghost"
             size="sm"
             aria-expanded={open}
-            aria-controls={panelId}
+            aria-controls={open ? panelId : undefined}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? 'Ocultar' : 'Detalhes'}

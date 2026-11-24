@@ -7,7 +7,7 @@ export function About() {
   return (
     <section id="sobre" aria-labelledby="sobre-titulo" className="section-pad relative">
       <div className="container-page">
-        <div className="grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
           {/* coluna esquerda: título */}
           <div className="lg:sticky lg:top-32 lg:self-start">
             <Reveal>
@@ -20,7 +20,7 @@ export function About() {
             <Reveal delay={0.08}>
               <h2
                 id="sobre-titulo"
-                className="mt-6 text-balance text-[2rem] font-bold leading-[1.08] sm:text-[2.6rem] lg:text-[2.9rem]"
+                className="mt-6 text-balance text-[2rem] font-semibold leading-[1.12] tracking-[-0.035em] sm:text-[2.6rem] lg:text-[2.9rem]"
               >
                 Da <span className="serif-accent text-gradient-brand">gestão de processos</span>
                 <br className="hidden sm:block" /> para o código.
@@ -47,7 +47,7 @@ export function About() {
             <div className="space-y-6">
               {about.paragraphs.map((paragraph, index) => (
                 <Reveal key={index} delay={0.05 * index}>
-                  <p className="text-[15.5px] leading-[1.85] text-ink-muted sm:text-[17px]">
+                  <p className="max-w-[65ch] text-[15.5px] leading-[1.85] text-ink-muted sm:text-[17px]">
                     {paragraph}
                   </p>
                 </Reveal>
