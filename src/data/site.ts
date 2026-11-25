@@ -19,7 +19,7 @@ export const profile = {
   availability: 'Disponível para projetos',
   // availability: 'Disponível para projetos e novas oportunidades',
   // availability: 'Jerffeson Florêncio',
-  photo: '/jerffeson-florencio.jpg',
+  photo: `${import.meta.env.BASE_URL}jerffeson-florencio.jpg`,
   email: 'jerffeson.florencio93@gmail.com',
   links: {
     github: 'https://github.com/jerffesonflorencio',

@@ -26,7 +26,7 @@ export async function submitContact(payload: ContactPayload): Promise<ContactRes
     return { ok: true, persisted: false }
   }
 
-  const { error } = await supabase.from('contact_messages').insert({
+  const { error } = await supabase.from('prof_contact_messages').insert({
     name: payload.name.trim(),
     email: payload.email.trim().toLowerCase(),
     company: payload.company?.trim() || null,

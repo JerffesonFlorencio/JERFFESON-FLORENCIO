@@ -76,7 +76,7 @@ faz fallback para o cliente de e-mail com os campos já preenchidos.
 ## Supabase — tabela de contato
 
 Execute `supabase/migrations/0001_contact_messages.sql` no SQL Editor do projeto.
-A migração cria a tabela `contact_messages` com RLS habilitado:
+A migração cria a tabela `prof_contact_messages` com RLS habilitado:
 
 - `anon` pode **apenas inserir** mensagens;
 - somente usuários autenticados conseguem ler o conteúdo recebido.
